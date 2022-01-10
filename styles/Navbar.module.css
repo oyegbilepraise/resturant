@@ -17,7 +17,12 @@
 
 .item:nth-child(2){
   flex: 3;
-  background-color: #fff;
+  /* background-color: #fff; */
+}
+
+.item:last-child{
+  justify-content: flex-end;
+  /* background-color: #fff; */
 }
 
 .callButton{
@@ -45,5 +50,33 @@
 
 .list{
   padding: 20px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: #fff;
+}
 
+.listItem {
+  margin: 20px;
+  font-weight: 500;
+}
+
+.cart{
+  position: 0;
+}
+
+.counter{
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  width: 20px;
+  height: 20px;
+  border-radius:50%;
+  background-color: #fff;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #d1411e;
 }
