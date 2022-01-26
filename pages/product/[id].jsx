@@ -1,6 +1,6 @@
 import styles from "../../styles/Product.module.css";
 import Image from "next/image";
-import {useState} from 'react'
+import { useState } from "react";
 
 const Product = () => {
   const [size, setSize] = useState(0);
@@ -39,40 +39,52 @@ const Product = () => {
           </div>
         </div>
         <h3 className={styles.choose}>
-            <div className={styles.ingredients}>
-                <div className={styles.option}>
-                    <input type="checkbox" name="double" id="double" className={styles.checkbox}/>
-                    <label htmlFor="double">
-                        Double Ingredients
-                    </label>
-                </div>
-
-                <div className={styles.option}>
-                    <input type="checkbox" name="garlic" id="garlic" className={styles.checkbox}/>
-                    <label htmlFor="garlic">
-                        Garlic Sauce
-                    </label>
-                </div>
-
-                <div className={styles.option}>
-                    <input type="checkbox" name="spicy" id="spicy" className={styles.checkbox}/>
-                    <label htmlFor="spicy">
-                        Spicy Sauce
-                    </label>
-                </div>
-
-                <div className={styles.option}>
-                    <input type="checkbox" name="cheese" id="cheese" className={styles.checkbox}/>
-                    <label htmlFor="cheese">
-                        Extra Cheese
-                    </label>
-                </div>
+          <div className={styles.ingredients}>
+            <div className={styles.option}>
+              <input
+                type="checkbox"
+                name="double"
+                id="double"
+                className={styles.checkbox}
+              />
+              <label htmlFor="double">Double Ingredients</label>
             </div>
+
+            <div className={styles.option}>
+              <input
+                type="checkbox"
+                name="garlic"
+                id="garlic"
+                className={styles.checkbox}
+              />
+              <label htmlFor="garlic">Garlic Sauce</label>
+            </div>
+
+            <div className={styles.option}>
+              <input
+                type="checkbox"
+                name="spicy"
+                id="spicy"
+                className={styles.checkbox}
+              />
+              <label htmlFor="spicy">Spicy Sauce</label>
+            </div>
+
+            <div className={styles.option}>
+              <input
+                type="checkbox"
+                name="cheese"
+                id="cheese"
+                className={styles.checkbox}
+              />
+              <label htmlFor="cheese">Extra Cheese</label>
+            </div>
+          </div>
         </h3>
 
         <div className={styles.add}>
-            <input type='number' defaultValue={1} className={styles.quantity}/>
-            <button className={styles.button} >Add to cart</button>
+          <input type="number" defaultValue={1} className={styles.quantity} />
+          <button className={styles.button}>Add to cart</button>
         </div>
       </div>
     </div>
