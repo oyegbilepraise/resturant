@@ -6,18 +6,18 @@ https://github.com/vercel/next.js/blob/canary/examples/with-mongodb-mongoose/uti
 **/
 
 
-const MONGODB_URL = process.env.MONGODB_URL
+const MONGODB_URI = process.env.MONGODB_URI
 
-if (!MONGODB_URL) {
+if (!MONGODB_URI) {
   throw new Error(
-    'Please define the MONGODB_URL environment variable inside .env.local'
+    'Please define the MONGODB_URI environment variable inside .env.local'
   )
 }
 
 /**
  * Global is used here to maintain a cached connection across hot reloads
  * in development. This prevents connections growing exponentially
- * dURLng API Route usage.
+ * during API Route usage.
  */
 let cached = global.mongoose
 
@@ -32,15 +32,10 @@ async function dbConnect () {
 
   if (!cached.promise) {
     const opts = {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
       bufferCommands: false,
-      bufferMaxEntries: 0,
-      useFindAndModify: true,
-      useCreateIndex: true
     }
 
-    cached.promise = mongoose.connect(MONGODB_URL, opts).then(mongoose => {
+    cached.promise = mongoose.connect(MONGODB_URI, opts).then(mongoose => {
       return mongoose
     })
   }
@@ -48,4 +43,4 @@ async function dbConnect () {
   return cached.conn
 }
 
-export default dbConnect;
+export default dbConnect
