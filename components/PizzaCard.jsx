@@ -9,7 +9,7 @@ const PizzaCard = ({pizza}) => {
         <Image src="/img/pizza.png" width="500" height="500" />
       </Link>
       <h1 className={styles.title}>{pizza.title}</h1>
-      <span className={styles.price}>{pizza.prices[0]}</span>
+      <span className={styles.price}>{pizza.prices}</span>
       <p className={styles.desc}>
         {pizza.desc}
       </p>
